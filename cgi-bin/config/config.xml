@@ -1,0 +1,135 @@
+<?xml version='1.0'?>
+<config>
+
+
+	<mode name="dev">
+		<site_url>http://www.subverse.eu</site_url>
+		<file_server>http://wywrota.pl:8080</file_server>
+		<file_dir>/data/wywrota/files/pliki</file_dir>
+		<cgi_dir>/data/wywrota/dev/cgi-bin</cgi_dir>
+		<www_dir>/data/wywrota/dev/static</www_dir>
+		<log_dir>/var/log/wywrota-dev</log_dir>
+		<tmp_dir>/var/cache/wywrota-dev</tmp_dir>
+		<template_dir>/data/wywrota/dev/template</template_dir>
+		<megafon_dir>/media/repository/megafon</megafon_dir>
+		<eventim_dir>/media/repository/eventim</eventim_dir>
+		<solr_url>http://wywrota.pl:8983/solr/</solr_url>
+		
+		<db>
+			<host>localhost</host>
+			<database>dev_wywrota_utf8</database>
+			<database_temp>dev_wywrota_temp</database_temp>
+			<login>dev_wywrota</login>
+			<pass>dev_wywrota_pass_123</pass>
+		</db>
+
+		<memcache>
+			<active>0</active>
+			<host>127.0.0.1</host>
+			<port>11211</port>
+		</memcache>
+
+		<session_disabled>0</session_disabled>
+
+		<!-- debug_levels = all, trace, debug, warn, error, none -->
+		<debug_level>error</debug_level>
+		<log_level>trace</log_level>
+		<log_sql>0</log_sql>
+		<log_email>0</log_email>
+		<log_per_processid>0</log_per_processid>
+		<allow_ip_request>1</allow_ip_request>
+		<block_multiple_ip>1</block_multiple_ip>
+		<cache>
+			<active>0</active>
+			<multiplier>1.0</multiplier>
+		</cache>
+	</mode>
+
+
+
+
+	<mode name="windows">
+		<site_url>http://www.wywrota.local:8080</site_url>
+		<file_server>http://www.wywrota.local:8080</file_server>
+		<file_dir>C:/dev/wywrotek/static/pliki</file_dir>
+		<cgi_dir>C:/dev/wywrotek/cgi-bin</cgi_dir>
+		<www_dir>C:/dev/wywrotek/static</www_dir>
+		<log_dir>C:/dev/wywrotek/log</log_dir>
+		<tmp_dir>c:/temp/wywrota</tmp_dir>
+		<template_dir>C:/dev/wywrotek/template</template_dir>
+		<megafon_dir>C:/dev/wywrotek/test/megafon</megafon_dir>
+		<eventim_dir>C:/dev/wywrotek/test/eventim</eventim_dir>
+		<solr_url>http://localhost:8983/solr/</solr_url>
+
+		<db>
+			<host>localhost</host>
+			<database>wywrota</database>
+			<database_temp>wywrota_temp</database_temp>
+			<login>root</login>
+			<pass>_</pass>
+		</db>
+
+		<memcache>
+			<active>0</active>
+			<host>127.0.0.1</host>
+			<port>11211</port>
+		</memcache>
+
+		<session_disabled>0</session_disabled>
+
+		<!-- debug_levels = all, trace, debug, warn, error, none -->
+		<debug_level>warn</debug_level>
+		<log_level>trace</log_level>
+		<log_sql>1</log_sql>
+		<log_email>1</log_email>
+		<log_per_processid>0</log_per_processid>
+		<allow_ip_request>1</allow_ip_request>
+		<block_multiple_ip>1</block_multiple_ip>
+		<cache>
+			<active>0</active>
+			<multiplier>1.0</multiplier>
+		</cache>
+	</mode>
+
+
+
+	<mode name="mac">
+		<site_url>http://www.wywrota.local</site_url>
+		<file_server>http://www.wywrota.local</file_server>
+		<file_dir>/Users/aerjotl/wywrota/static/pliki</file_dir>
+		<cgi_dir>/Users/aerjotl/wywrota/src/cgi-bin</cgi_dir>
+		<www_dir>/Users/aerjotl/wywrota/static</www_dir>
+		<log_dir>/Users/aerjotl/wywrota/log</log_dir>
+		<tmp_dir>/tmp/wywrota</tmp_dir>
+		<template_dir>/Users/aerjotl/wywrota/src/template</template_dir>
+		<megafon_dir>/Users/aerjotl/wywrota/src/test/megafon</megafon_dir>
+		<eventim_dir>/Users/aerjotl/wywrota/src/test/eventim</eventim_dir>
+		
+		<db>
+			<host>localhost</host>
+			<database>wywrota_utf8</database>
+			<login>root</login>
+			<pass>_</pass>
+		</db>
+
+		<memcache>
+			<active>1</active>
+			<host>127.0.0.1</host>
+			<port>11211</port>
+		</memcache>
+
+		<!-- debug_levels = all, trace, debug, warn, error, none -->
+		<debug_level>warn</debug_level>
+		<log_level>trace</log_level>
+		<log_sql>1</log_sql>
+		<log_email>1</log_email>
+		<log_per_processid>1</log_per_processid>
+		<allow_ip_request>1</allow_ip_request>
+		<block_multiple_ip>1</block_multiple_ip>
+		<cache>
+			<active>0</active>
+			<multiplier>1.0</multiplier>
+		</cache>
+	</mode>
+
+</config>

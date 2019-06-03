@@ -1,0 +1,66 @@
+<?xml version='1.0'?>
+<domains>
+
+	<domain name="wywrota.local">
+		<id>1</id>
+		<url>http://www.wywrota.local</url>
+		<lang>1</lang>
+		<subdomains>
+			<sub name="www"			cid="3"		page_id="1"/>
+			<sub name="literatura"	cid="1"		page_id="2"/>
+			<sub name="muzyka"		cid="1"		page_id="14"/>
+			<sub name="spiewnik"	cid="7"		page_id="18"/>
+			<sub name="konkursy"	cid="20"	page_id="1"/>
+			<sub name="grupy"		cid="12"	page_id="100"/>
+			<sub name="kultura"		cid="3"		page_id="31"/>
+			<sub name="galeria"		cid="16"	page_id="25"/>
+		</subdomains>
+	</domain>
+
+	<domain name="subverse.eu">
+		<id>2</id>
+		<url>http://www.subverse.eu</url>
+		<lang>2</lang>
+	</domain>
+
+	<domain name="wrot.net">
+		<id>3</id>
+		<url>http://www.wrot.net</url>
+		<lang>1</lang>
+		<subdomains>
+			<sub name="www"		cid="12"	page_id="100"/>
+			<sub name="dummy"	cid="0"		page_id="0"/>
+		</subdomains>
+	</domain>
+
+	<domain name="teksty-piosenki.pl">
+		<id>4</id>
+		<url>http://www.teksty-piosenki.pl</url>
+		<lang>1</lang>
+		<subdomains>
+			<sub name="www"			cid="7"		page_id="18"/>
+			<sub name="dummy"		cid="0"		page_id="0"/>
+		</subdomains>
+	</domain>
+
+	<domain name="nagitare.pl">
+		<id>5</id>
+		<url>http://www.nagitare.pl</url>
+		<lang>1</lang>
+		<subdomains>
+			<sub name="www"			cid="7"		page_id="18"/>
+			<sub name="dummy"		cid="0"		page_id="0"/>
+		</subdomains>
+	</domain>	
+	<!--
+	<domain name="siecioholizm.info">
+		<id>6</id>
+		<url>http://www.siecioholizm.info</url>
+		<lang>1</lang>
+		<subdomains>
+			<sub name="www"			cid="3"		page_id="18"/>
+			<sub name="dummy"		cid="0"		page_id="0"/>
+		</subdomains>
+	</domain>
+	-->
+</domains>

@@ -1,0 +1,547 @@
+<?xml version='1.0'?>
+<config>
+
+  <item>
+    <id>1</id>
+    <keyword>tekst</keyword>
+    <title>poezja, wiersze, opowiadania, literatura</title>
+    <package>Literature</package>
+    <page_id>2</page_id>
+    <records_per_page>50</records_per_page>
+    <style>literatura.css</style>
+    <tablename>teksty</tablename>
+    <url>literatura</url>
+    <vote>1</vote>
+    <sets>0</sets>
+    <favorites>1</favorites>
+    <comments>1</comments>
+	<moderation>0</moderation>
+	<distinction>1</distinction>
+    <anonymous_vote>0</anonymous_vote>
+    <anonymous_comment>1</anonymous_comment>
+    <record_url>/{typ}/{id}-{autor}-{tytul}.html</record_url>
+    <record_url_domain>literatura</record_url_domain>
+	<sort>
+		<by>tytul,alfabetycznie,ascend</by>
+		<by default="1">data_publikacji,chronologicznie,descend</by>
+	</sort>
+	<dict>
+		<field name="typ" dict="typ"/>
+		<field name="stan" dict="base:stan"/>
+		<field name="wyroznienie" dict="base:wyroznienie"/>
+		<field name="lang" dict="base:lang"/>
+		<field name="contest_id" dict="base:contest_id"/>
+		<field name="can_comment" dict="base:can_comment"/>
+		<field name="can_vote" dict="base:can_vote"/>
+	</dict>
+  </item>
+
+
+  <item>
+    <id>3</id>
+    <keyword>artykul</keyword>
+    <title>Artykuły na Wywrocie</title>
+    <package>Article</package>
+    <page_id>1</page_id>
+    <records_per_page>25</records_per_page>
+    <tablename>article</tablename>
+    <url>artykuly</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>1</favorites>
+    <comments>1</comments>
+	<moderation>1</moderation>
+    <anonymous_vote>0</anonymous_vote>
+    <anonymous_comment>1</anonymous_comment>
+    <record_url>/{typ}/{id}-{tytul}.html</record_url>
+	<sort>
+		<by>tytul,alfabetycznie,ascend</by>
+		<by default="1">data_publikacji,chronologicznie,descend</by>
+	</sort>
+	<dict> 
+		<field name="typ" dict="Article:typ"/>
+		<field name="stan" dict="base:stan"/>
+		<field name="category" dict="Article:category"/>
+		<field name="show_photo_list" dict="Article:show_photo_list"/>
+		<field name="lang" dict="base:lang"/>
+		<field name="contest_id" dict="base:contest_id"/>
+	</dict>
+  </item>
+
+
+  <item>
+    <id>6</id>
+    <keyword>osoba</keyword>
+    <title>Akta wywroty</title>
+    <package>User</package>
+    <page_id>1</page_id>
+    <records_per_page>30</records_per_page>
+    <style>ludzie.css</style>
+    <tablename>ludzie</tablename>
+    <url>ludzie</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <record_url>/ludzie/{wywrotid}</record_url>
+	<safefields>id,wywrotid,imie,email,plec,skad</safefields>
+    <favorites>1</favorites>
+	<!-- <dict>
+		my $contentDict ={
+		# wojewodztwo dict="base:wojewodztwo"/>
+		# plec dict="User:plec"/>
+		# adres_zastrz dict="User:adres_zastrz"/>
+	</dict> -->
+  </item>
+
+
+  <item>
+    <id>7</id>
+    <keyword>tekst piosenki</keyword>
+    <title>teksty piosenek, chwyty na gitarę, akordy, tabulatury</title>
+    <package>Lyrics</package>
+    <page_id>18</page_id>
+    <records_per_page>50</records_per_page>
+    <style>spiewnik.css</style>
+    <tablename>spiewnik</tablename>
+    <url>teksty</url>
+    <vote>1</vote>
+    <sets>0</sets>
+    <favorites>1</favorites>
+    <comments>1</comments>
+    <anonymous_vote>1</anonymous_vote>
+    <anonymous_comment>1</anonymous_comment>
+	<sort>
+		<by default="1">tytul,alfabetycznie,ascend</by>
+		<by>wykonawca,według wykonawcy,ascend</by>
+	</sort>
+    <record_url>/{whatwehave_seo}/{id}-{wykonawca}-{tytul}.html</record_url>
+    <record_url_domain>teksty</record_url_domain>
+	<dict>
+		<field name="jezyk" dict="base:lang"/>
+		<field name="stan" dict="base:stan"/>
+		<field name="czy_slowa" dict="Lyrics:czy_slowa"/>
+		<field name="czy_chwyty" dict="Lyrics:czy_chwyty"/>
+		<field name="czy_tabulatura" dict="Lyrics:czy_tabulatura"/>
+	</dict>
+  </item>
+
+  <item>
+    <id>8</id>
+    <keyword>komentarz</keyword>
+    <title>Komentarze</title>
+    <package>Comment</package>
+    <page_id>1</page_id>
+    <records_per_page>25</records_per_page>
+    <tablename>komentarze</tablename>
+    <url>komentarze</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+    <comments>0</comments>
+	<flags>1</flags>
+  </item>
+
+  <item>
+    <id>9</id>
+    <keyword>cytat</keyword>
+    <title>Cytaty</title>
+    <package>Quote</package>
+    <page_id>1</page_id>
+    <records_per_page>25</records_per_page>
+    <tablename>quote</tablename>
+    <url>cytaty</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+    <comments>0</comments>
+	<dict>
+		<field name="size" dict="Quote:size"/>
+		<field name="dummy" dict="base:yes"/>
+	</dict>
+  </item>
+
+
+  <item>
+    <id>10</id>
+    <keyword>nagranie</keyword>
+    <title>Wasza muzyka i Podcast literacki</title>
+    <package>MP3</package>
+    <page_id>17</page_id>
+    <records_per_page>20</records_per_page>
+    <style>podcast.css</style>
+    <tablename>mp3</tablename>
+    <url>mp3</url>
+    <vote>1</vote>
+    <sets>0</sets>
+    <favorites>1</favorites>
+    <comments>1</comments>
+	<moderation>0</moderation>
+	<distinction>1</distinction>
+	<anonymous_vote>0</anonymous_vote>
+    <anonymous_comment>1</anonymous_comment>
+    <record_url>/db/mp3/{id}-{tytul}-{autor}.html</record_url>
+	<sort>
+		<by>tytul,alfabetycznie,ascend</by>
+		<by default="1">data_publikacji,chronologicznie,descend</by>
+	</sort>
+	<dict>
+		<field name="stan" dict="base:stan"/>
+		<field name="wyroznienie" dict="base:wyroznienie"/>
+		<field name="contest_id" dict="base:contest_id"/>
+		<field name="typ" dict="MP3:typ"/>
+		<field name="can_comment" dict="base:can_comment"/>
+		<field name="can_vote" dict="base:can_vote"/>
+	</dict>
+  </item>
+
+  <item>
+    <id>12</id>
+    <keyword>wspólnota</keyword>
+    <title>Forum</title>
+    <package>ForumGroup</package>
+    <page_id>100</page_id>
+    <records_per_page>20</records_per_page>
+    <style>forum.css</style>
+    <tablename>forum_kategorie</tablename>
+    <url>group</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<sort>
+		<by>tytul,alfabetycznie,ascend</by>
+		<by default="1">_fav_cnt,wg liczby członków,descend</by>
+	</sort>
+    <record_url>/db/group/{id}-{tytul}.html</record_url>
+	<record_url_domain>forum</record_url_domain>
+	<dict>
+		<field name="typ" dict="typ"/>
+		<field name="stan" dict="stan"/>
+		<field name="tematyka" dict="tematyka"/>
+		<field name="closed" dict="closed"/>
+
+		<field name="grafika" type="image">
+			<size name="px" width="50" height="50"   force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="sq" width="100" height="100" force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="med" width="280" height="240" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="lg"  width="730" height="600" force_enlarge="0" crop="0"  include_logo="1" />
+		</field> 
+
+	</dict>
+  </item>
+
+  <item>
+    <id>13</id>
+    <keyword>post</keyword>
+    <title>Forum - posty</title>
+    <package>ForumPost</package>
+    <page_id>100</page_id>
+    <records_per_page>20</records_per_page>
+    <style>forum.css</style>
+    <tablename>forum_posty</tablename>
+    <url>forum</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<flags>0</flags>
+	<record_url>/{parent_id}-{temat}.html</record_url>
+	<record_url_domain>forum</record_url_domain>
+	<sort>
+		<by default="1">time,chronologicznie,ascend</by>
+		<by>time,chronologicznie,ascend</by>
+	</sort>
+  </item>
+
+  
+  
+  <item>
+    <id>14</id>
+    <keyword>zdjecie</keyword>
+    <title>Zdjęcia</title>
+    <package>SiteImages</package>
+    <page_id>1</page_id>
+    <records_per_page>20</records_per_page>
+    <tablename>site_images</tablename>
+    <url>site_images</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<dict>
+		<field name="typ" dict="SiteImages:typ"/>
+		<field name="isdefault" dict="SiteImages:isdefault"/>
+
+		<field name="nazwa_pliku" type="image">
+			<size name="px" width="50" height="50"   force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="sm" width="100" height="100" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="sq" width="100" height="100" force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="sq2" width="140" height="140" force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="s1" width="320" height="300" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="med" width="180" height="160" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="lg"  width="920" height="760" force_enlarge="0" crop="0"  include_logo="0" />
+		</field> 
+
+	</dict>
+  </item>
+
+  
+  
+  <item>
+    <id>15</id>
+    <keyword>wykonawca</keyword>
+    <title>Fan Club</title>
+    <package>Band</package>
+    <page_id>200</page_id>
+    <records_per_page>24</records_per_page>
+    <style>spiewnik.css</style>
+    <tablename>wykonawcy</tablename>
+    <url>wykonawcy</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<record_url>/{wykonawca_urlized}/</record_url>
+	<record_url_domain>teksty</record_url_domain>
+	<sort>
+		<by default="1">wykonawca,alfabetycznie,ascend</by>
+		<by>_fav_cnt,wg liczby członków,descend</by>
+	</sort>
+	<dict>
+		<field name="lang" dict="base:lang"/>
+		<field name="promoted" dict="base:yes"/>
+	</dict>
+  </item>
+  
+  
+
+  <item>
+    <id>16</id>
+    <keyword>praca graficzna</keyword>
+    <title>Galeria</title>
+    <package>Image</package>
+    <page_id>25</page_id>
+    <records_per_page>30</records_per_page>
+    <style>galeria.css</style>
+    <tablename>image</tablename>
+    <url>image</url>
+    <vote>1</vote>
+    <sets>0</sets>
+    <favorites>1</favorites>
+    <comments>1</comments>
+	<moderation>0</moderation>
+	<distinction>1</distinction>
+	<anonymous_vote>0</anonymous_vote>
+    <anonymous_comment>1</anonymous_comment>
+	<sort>
+		<by>podpis,alfabetycznie,ascend</by>
+		<by default="1">data_publikacji,chronologicznie,descend</by>
+	</sort>
+    <record_url>/db/image/{id}-{podpis}-{ludzie_imie}.html</record_url>
+
+	<dict>
+		<field name="typ" dict="Image:typ"/>
+		<field name="temat" dict="Image:temat"/>
+		<field name="stan" dict="base:stan"/>
+		<field name="wyroznienie" dict="base:wyroznienie"/>
+		<field name="can_comment" dict="base:can_comment"/>
+		<field name="can_vote" dict="base:can_vote"/>
+
+		<field name="plik" type="image">
+			<size name="px" width="50" height="50"   force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="sm" width="100" height="100" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="sq" width="100" height="100" force_enlarge="1" crop="1"  include_logo="0" />
+			<size name="s1" width="280" height="240" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="med" width="480" height="520" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="lg"  width="730" height="700" force_enlarge="0" crop="0"  include_logo="0" />
+			<size name="xl" width="1200" height="1000" force_enlarge="0" crop="0"  include_logo="0" />
+		</field> 
+
+	</dict>
+  </item>
+
+  <item>
+    <id>17</id>
+    <keyword>strona</keyword>
+    <title>Strony</title>
+    <package>Page</package>
+    <page_id>56</page_id>
+    <records_per_page>100</records_per_page>
+    <style>pages.css</style>
+    <tablename>page</tablename>
+    <url>pages</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<dict>
+
+		<field name="active" dict="Page:active"/>
+		<field name="lang" dict="Page:lang"/>
+		<field name="content_id" dict="Page:content_id"/>
+		<field name="nomenu" dict="Page:nomenu"/>
+		<field name="color" dict="Page:color"/>
+
+	</dict>
+  </item>
+
+  <item>
+    <id>18</id>
+    <keyword>kanał</keyword>
+    <title>Kanały RSS</title>
+    <package>RSS</package>
+    <page_id>1</page_id>
+    <records_per_page>30</records_per_page>
+    <tablename>rss_feed</tablename>
+    <url>rss</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+  </item>
+
+  <item>
+    <id>19</id>
+    <keyword>wpis</keyword>
+    <title>Wydarzenia</title>
+    <package>Event</package>
+    <page_id>1</page_id>
+    <records_per_page>30</records_per_page>
+    <style>event.css</style>
+    <tablename>event</tablename>
+    <url>event</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<dict>
+		<field name="featured" dict="featured"/>
+		<field name="auspices" dict="auspices"/>
+	</dict>
+  </item>
+
+  <item>
+    <id>20</id>
+    <keyword>konkurs</keyword>
+    <title>Konkursy</title>
+    <package>Contest</package>
+    <page_id>1</page_id>
+    <records_per_page>30</records_per_page>
+    <style>konkursy.css</style>
+    <tablename>contest</tablename>
+    <url>konkursy</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+  </item>
+
+  <item>
+    <id>21</id>
+    <keyword>konto</keyword>
+    <title>Konto Premium</title>
+    <package>PremiumAccount</package>
+    <page_id>1</page_id>
+    <records_per_page>30</records_per_page>
+    <tablename>premium_account</tablename>
+    <url>premium</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+  </item>
+
+  <item>
+    <id>22</id>
+    <keyword>grupa</keyword>
+    <title>Grupy użytkowników</title>
+    <package>UserGroup</package>
+    <page_id>1</page_id>
+    <records_per_page>20</records_per_page>
+    <style>ludzie.css</style>
+    <tablename>ugroup</tablename>
+    <url>ugroup</url>
+    <vote>0</vote>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<dict>
+		<field name="visible" dict="base:yes"/>
+		<field name="dummy" dict="base:yes"/>
+	</dict>
+  </item>
+
+  <item>
+    <id>23</id>
+    <keyword>zestaw</keyword>
+    <title>Zestawy</title>
+    <package>RecordSet</package>
+    <page_id>1</page_id>
+    <records_per_page>20</records_per_page>
+    <tablename>record_set</tablename>
+    <vote>0</vote>
+    <url>set</url>
+    <sets>0</sets>
+    <favorites>1</favorites>
+    <style>recordset.css</style>
+    <record_url>/db/set/{id}-{title}.html</record_url>
+	<dict>
+		<field name="privacy" dict="base:privacy"/>
+		<field name="dummy" dict="base:yes"/>
+	</dict>
+  </item>
+
+  <item>
+    <id>24</id>
+    <keyword>banner</keyword>
+    <title>Bannery wewnątrz serwisu</title>
+    <package>SiteBanner</package>
+    <page_id>1</page_id>
+    <records_per_page>100</records_per_page>
+    <tablename>site_banner</tablename>
+    <vote>0</vote>
+    <url>banner</url>
+    <sets>0</sets>
+    <favorites>0</favorites>
+    <style>event.css</style>
+	<dict>
+		<field name="on_home" dict="base:yes"/>
+		<field name="on_home2" dict="base:yes"/>
+		<field name="on_literature" dict="base:yes"/>
+		<field name="on_music" dict="base:yes"/>
+		<field name="on_culture" dict="base:yes"/>
+		<field name="on_art" dict="base:yes"/>
+
+		<field name="image_file" type="image">
+			<size name="sm" width="100" height="100" force_enlarge="1" crop="0"  include_logo="0" />
+			<size name="s1" width="120" height="200" force_enlarge="1" crop="0"  include_logo="0" />
+		</field> 
+
+	</dict>
+  </item>
+
+
+  <item>
+    <id>25</id>
+    <keyword>nagroda</keyword>
+    <title>Nagrody</title>
+    <package>Award</package>
+    <page_id>1082</page_id>
+    <records_per_page>12</records_per_page>
+    <tablename>award</tablename>
+    <vote>0</vote>
+    <url>award</url>
+    <sets>0</sets>
+    <favorites>0</favorites>
+	<sort>
+		<by default="1">award_date,wg. daty przyznania,descend</by>
+		<by>prize_info,najpierw niewysłane,ascend</by>
+	</sort>
+  </item>
+
+
+
+  <item>
+    <id>27</id>
+    <keyword>wpis</keyword>
+    <title>HashConfirm</title>
+    <package>HashConfirm</package>
+    <page_id>1</page_id>
+    <records_per_page>30</records_per_page>
+    <tablename>hash_confirm</tablename>
+    <vote>0</vote>
+    <url>hash</url>
+    <sets>0</sets>
+    <favorites>0</favorites>
+  </item>
+  
+</config>

@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<recipients>
+
+  <recipient id="1">
+	<title>Redakcja</title>
+	<email>kontakt@subverse.eu</email>
+  </recipient>
+  
+  <recipient id="2">
+	<title>Literatura</title>
+	<email>literatura@subverse.eu</email>
+  </recipient>
+  
+  <recipient id="3">
+	<title>Teatr</title>
+	<email>teatr@subverse.eu</email>
+  </recipient>
+
+  <recipient id="4">
+	<title>Poezja</title>
+	<email>poezja@subverse.eu</email>
+  </recipient>
+ 
+  <recipient id="5">
+	<title>Administrator</title>
+	<email>reklama@subverse.eu</email>
+  </recipient>
+
+</recipients>
